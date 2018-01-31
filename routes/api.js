@@ -16,10 +16,10 @@ Data.before('post', function(req, res, next){
 	next();
 });
 
-Data.after('post', function(req, res, next){
+/*Data.after('post', function(req, res, next){
 	//console.log(res.locals.bundle);
 	next();
-});
+});*/
 
 Data.register(router, '/data')
 
