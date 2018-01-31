@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var port = process.env.PORT || 3000;
 
 var db = mongoose.connect('mongodb://kk9:mongo123@ds127564.mlab.com:27564/testdatabase', function(err){
 	if(err) console.log('Connection error: ' + err);
@@ -12,6 +13,6 @@ app.use(bodyParser.json());
 
 app.use('/api', require('./routes/api'));
 
-app.listen(3000);
+app.listen(port);
 //process.on('unhandledRejection', up => { throw up })
 console.log('API is listening on database');
